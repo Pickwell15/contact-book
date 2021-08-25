@@ -102,7 +102,7 @@ class Main:
     def _save(self) -> None:
         self._write_file(self.__CONTACTS_DIR, dumps(list(repr(self._contacts[index]) for index, _ in enumerate(self._contacts)), sort_keys=True, indent=4))
 
-    def _load(self) -> list[Contact]:
+    def _load(self) -> iterator[Contact]:
         for item in self._read_json(self.__CONTACTS_DIR):
             yield eval(item)
 
