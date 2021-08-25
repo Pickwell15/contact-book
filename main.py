@@ -10,7 +10,7 @@ class Main:
 
     __CONTACTS_DIR: str = "./contacts.json"
 
-    __MENU_ITEMS: list[str] = ["View Contacts", "New Contact", "Delete Contact"]
+    __MENU_ITEMS: tuple[str, ...] = ("View Contacts", "New Contact", "Delete Contact")
 
     __NUMBER_REGEX: str = r"^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$"
 
