@@ -4,7 +4,7 @@ class Contact:
     __NUM_DEFAULT: str = "UNKNOWN"
     __ADDR_DEFAULT: str = "UNKNOWN"
 
-    def __init__(self, name: str, num: str, addr: str) -> None:
+    def __init__(self, name: str = self.__NAME_DEFAULT, num: str = self.__NUM_DEFAULT, addr: str = self.__ADDR_DEFAULT) -> None:
         self.name: str = name
         self.num: str = num
         self.addr: str = addr
