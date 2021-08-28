@@ -185,7 +185,6 @@ class Main:
             else:
                 print("ERROR: Invalid contact number. Please try again...")
 
-<<<<<<< HEAD
         except ValueError:  # if a number isn't entered
             print("ERROR: Invalid contact number. Please try again...")
 
