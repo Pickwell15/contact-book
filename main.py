@@ -174,18 +174,13 @@ class Main:
 
         try:
             index = int(input())-1
-  
-        except ValueError:
-            print("ERROR: Invalid contact number. Please try again...")
-        
-        finally:
             if index <= len(self._contacts):
                 self._contacts.pop(index)  # remove contact from list
                 async_run(self._save())  # save to file
             else:
                 print("ERROR: Invalid contact number. Please try again...")
-
-        except ValueError:  # if a number isn't entered
+  
+        except ValueError:
             print("ERROR: Invalid contact number. Please try again...")
 
     async def _save(self) -> None:
@@ -201,10 +196,6 @@ class Main:
     def _load(self) -> Generator[Contact]:
         """
         Loads the contents of the savefile.
-=======
-    def _save(self) -> None:
-        self._write_file(self.__CONTACTS_DIR, dumps(list(repr(self._contacts[index]) for index, _ in enumerate(self._contacts)), sort_keys=True, indent=4))
->>>>>>> 362e687603ff4f558bd8b984a5ffb44e23a21387
 
         :return: Generator[Contact]
         """
